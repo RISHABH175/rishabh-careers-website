@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+      h1{
+        font-size:50px;
+        font-family:Roboto;
+        font-weight:normal;
+        text-align:center;
+      }
+
+      #image
+      {
+        width: 100%;
+        height: 300px;
+        object-fit:contain;
+      }
+      #container
+      {
+        max-width:720px;
+        margin:0 auto 0 auto;
+      }
+    </style>
+  </head>
+  <body >
+    <div id="container">
+    <h1>Rishabh Careers</h1>
+    <br>
+    <img id="image" class="img-fluid" src="https://images.unsplash.com/photo-1594323713852-9626155bfd37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" width="300px" height="300px" ">
+    <h2 style="text-align:center">About Rishabh</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et metus fermentum urna fringilla consequat sed at neque. Aliquam erat volutpat. Aliquam iaculis semper diam, quis rutrum diam. Mauris finibus bibendum ante eget pharetra. Proin sed iaculis erat, et vestibulum purus. Nunc pharetra, metus at vulputate consequat, arcu odio tincidunt lacus, feugiat commodo mi eros vel enim. Vivamus porta felis orci, euismod volutpat felis sagittis at.
+
+Vivamus dictum tincidunt tempor. Sed eu ligula a nisi scelerisque pretium. Proin ligula eros, dictum quis quam quis, consectetur condimentum felis. Mauris a tempor dui. Curabitur non lectus gravida, dignissim eros ac, tincidunt ipsum. Donec quis aliquam enim. Ut lectus nibh, ornare eget arcu id, varius mollis orci. Vestibulum dapibus vel nunc nec fringilla. Morbi at varius felis. Aliquam eget nibh eget tortor rutrum placerat. Duis massa purus, eleifend vel tincidunt id, suscipit vitae lacus. Ut molestie est pulvinar justo luctus, ut dictum nisi consectetur. Ut malesuada nisi in orci condimentum dapibus.
+
+Vestibulum venenatis, ipsum sed imperdiet luctus, risus purus ornare justo, et laoreet elit augue eget ligula. Nunc in felis facilisis, venenatis nunc eu, facilisis mauris. Maecenas at molestie dolor, sit amet sollicitudin tortor. Sed efficitur ornare erat in convallis. Aenean semper ultricies ornare. Donec id erat et risus eleifend dictum non ac odio. Quisque vitae sodales est, non facilisis risus.</p>
+  
+    <h2 style="text-align:center">Open Positions</h2>
+        <div>
+          {% for job in jobs %}
+            {% include 'jobitem.html' %}
+          {% endfor %}
+        </div>
+        
+   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
